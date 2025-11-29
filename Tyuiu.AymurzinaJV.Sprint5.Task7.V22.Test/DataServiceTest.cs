@@ -8,8 +8,10 @@ namespace Tyuiu.AymurzinaJV.Sprint5.Task7.V22.Test
         [TestMethod]
         public void TestMethod1()
         {
-            string path = @"C:\Users\plans\source\repos\Tyuiu.AymurzinaJV.Sprint5\Tyuiu.AymurzinaJV.Sprint5.Task7.V22\bin\Debug\net8.0\OutPutDataFileTask7V22.txt";
-            FileInfo fileInfo = new FileInfo(path);
+            DataService ds = new DataService();
+            string path = @"C:\DataSprint5\InPutDataFileTask7V22.txt";
+            string pathSaveFile = ds.LoadDataAndSave(path); 
+            FileInfo fileInfo = new FileInfo(pathSaveFile);
             bool fileExists = fileInfo.Exists;
             bool wait = true;
             Assert.AreEqual(wait, fileExists);
