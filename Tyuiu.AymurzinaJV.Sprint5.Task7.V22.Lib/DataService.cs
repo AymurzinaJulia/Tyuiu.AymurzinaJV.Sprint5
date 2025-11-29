@@ -5,7 +5,7 @@ namespace Tyuiu.AymurzinaJV.Sprint5.Task7.V22.Lib
     {
         public string LoadDataAndSave(string path)
         {
-            string pathSaveFile = $@"{Directory.GetCurrentDirectory()}\OutPutDataFileTask7V22.txt";
+            string pathSaveFile = Path.Combine(Directory.GetCurrentDirectory(), "OutPutDataFileTask7V22.txt");
 
             FileInfo fileinfo = new FileInfo(pathSaveFile);
             bool fileExists = fileinfo.Exists;
